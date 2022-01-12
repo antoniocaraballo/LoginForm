@@ -12,22 +12,32 @@
     <title>Welcome | Login</title>
   </head>
   <body>
+    <!-- Wrapper -->
     <div class="wrapper">
+      <!-- Login / Register Card -->
       <div class="card">
+        <!-- Welcome -->
         <div>
-          <h2 class="heading">Welcome,</h2>
+          <h2 class="heading">Welcome!</h2>
           <p class="text">Let's build something</p>
         </div>
+        <!-- Form -->
         <form class="loginForm">
-          <h4>Sign in</h4>
+          <h4 id="title">Sign in</h4>
+          <label for="name" class="nameInput">Name</label>
+          <input type="name" name="email" class="nameInput" />
           <label for="email">Email</label>
           <input type="email" name="email" id="emailInput" />
           <label for="password">Password</label>
           <input type="password" name="password" id="passInput" />
-          <button class="btn">Sign in</button>
+          <button class="btn" type="submit">Sign in</button>
         </form>
+        <!-- Footer -->
         <footer>
-          <p class="text">Don't have an account? <a href="#">Sign up</a></p>
+          <p class="text">Don't have an account?</p>
+          <a href="#" id="signUp" class="text">Sign up</a>
+          <a href="#" id="signIn" class="text">Sign in</a>
+          <!-- Socials -->
           <div class="socials">
             <ul>
               <li>
@@ -44,5 +54,7 @@
         </footer>
       </div>
     </div>
+    <!-- JavaScript -->
+    <script src="./app.js"></script>
   </body>
 </html>
