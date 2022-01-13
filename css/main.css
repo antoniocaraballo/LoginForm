@@ -93,6 +93,10 @@ body {
   background: #0597f2;
 }
 
+#suBtn {
+  display: none;
+}
+
 .nameInput {
   display: none;
 }

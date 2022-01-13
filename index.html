@@ -22,15 +22,16 @@
           <p class="text">Let's build something</p>
         </div>
         <!-- Form -->
-        <form class="loginForm">
+        <form class="loginForm" onsubmit="return false">
           <h4 id="title">Sign in</h4>
           <label for="name" class="nameInput">Name</label>
-          <input type="name" name="email" class="nameInput" />
+          <input type="name" name="email" class="nameInput" id="nameInput" />
           <label for="email">Email</label>
           <input type="email" name="email" id="emailInput" />
           <label for="password">Password</label>
           <input type="password" name="password" id="passInput" />
-          <button class="btn" type="submit">Sign in</button>
+          <button class="btn" type="submit" id="siBtn">Sign in</button>
+          <button class="btn" type="submit" id="suBtn">Sign up</button>
         </form>
         <!-- Footer -->
         <footer>
