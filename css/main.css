@@ -1,139 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap");
 * {
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
+  color: #0f0f0f;
 }
 
-body {
-  background: #0d0d0d;
-  background: radial-gradient(#0378a6, #0d0d0d);
-  color: #0d0d0d;
-  font-family: Arial, Helvetica, sans-serif;
+html, body {
+  background: #ff9300;
 }
 
-.wrapper {
-  width: 100%;
+.hero {
   height: 100vh;
-  display: grid;
-  place-items: center;
-}
-
-.card {
-  background: #f2f2f2;
-  padding: 30px;
-  border-radius: 10px;
   width: 100%;
-  max-width: 400px;
-  -webkit-box-shadow: 0px 0px 15px 0.5px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 0px 15px 0.5px rgba(0, 0, 0, 0.2);
-}
-
-.heading {
-  font-size: 32px;
-}
-
-.text {
-  font-size: 12px;
-}
-
-.loginForm {
-  margin: 50px 0 20px 0;
+  background: linear-gradient(160deg, #ff9300, #c6c6c6);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-.loginForm h4 {
-  font-size: 24px;
-  text-align: center;
-  margin-bottom: 10px;
-}
-.loginForm label {
-  font-size: 12px;
-}
-.loginForm input {
-  font-size: 12px;
-  margin: 5px 0 10px 0;
-  outline: none;
-  border: none;
-  border-radius: 5px;
-  padding: 5px;
-  width: 100%;
-  height: 30px;
-  -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.05);
-          box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.05);
-}
-.loginForm button {
-  margin-top: 10px;
-  -webkit-box-shadow: 0px 0px 15px 0.5px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 0px 15px 0.5px rgba(0, 0, 0, 0.2);
-}
-
-.btn {
-  font-size: 12px;
-  padding: 8px 30px;
-  outline: none;
-  border: none;
-  border-radius: 5px;
-  background: #0378a6;
-  color: #f2f2f2;
-  text-align: center;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  -ms-flex-item-align: center;
-      align-self: center;
-  cursor: pointer;
-}
-.btn:hover {
-  background: #0597f2;
-}
-
-#suBtn {
-  display: none;
-}
-
-.nameInput {
-  display: none;
-}
-
-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
-footer #signIn {
-  display: none;
-}
-footer .socials {
-  margin-top: 20px;
-}
-footer a {
-  color: #0378a6;
-}
-footer ul {
-  list-style: none;
+
+.card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  max-height: 600px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+  padding: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-footer ul li {
-  margin: 10px;
+
+.title {
+  font-size: 40px;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
 }
-footer ul li a {
-  font-size: 20px;
+
+#loginForm {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 20px;
 }
-footer ul li a:hover {
-  color: #0597f2;
+#loginForm label {
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+#loginForm input {
+  height: 45px;
+  border: 1px solid transparent;
+  outline: none;
+  border-radius: 5px;
+  background: #f4f4f4;
+  padding: 0px 5px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+#loginForm input:focus {
+  border: 2px solid #ff9300;
+}
+
+.btn {
+  background: #ff9300;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  color: #ffffff;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.btn:hover {
+  cursor: pointer;
+  background: #ff9500de;
+}
+
+.text {
+  text-align: center;
+}
+.text a {
+  color: #ff9300;
+  text-decoration: none;
+}
+
+.socials {
+  text-align: center;
+  margin-top: 40px;
+}
+.socials a {
+  text-decoration: none;
+  margin: 20px;
+  font-size: 30px;
+}
+.socials a:hover {
+  cursor: pointer;
+}
+.socials a:hover i {
+  color: #ff9300;
 }
