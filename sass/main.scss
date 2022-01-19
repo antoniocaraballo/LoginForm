@@ -83,6 +83,8 @@ html, body {
   color: #ffffff;
   font-size: 16px;
   text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
 
   &:hover {
     cursor: pointer;
@@ -114,5 +116,30 @@ html, body {
         color: #ff9300;
       }
     }
+  }
+}
+
+// 
+// 
+// Welcome Card
+// 
+// 
+
+.welcomeCard  {
+  background: #ffffff;
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  max-height: 600px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, .25);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  
+  h4 {
+    text-align: left;
+    font-size: 50px;
   }
 }
