@@ -72,6 +72,9 @@ html, body {
   font-size: 16px;
   text-transform: uppercase;
   margin-bottom: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .form input {
   height: 45px;
@@ -85,6 +88,14 @@ html, body {
 }
 .form input:focus {
   border: 2px solid #ff9300;
+}
+
+.error {
+  margin-left: 15px;
+  color: red;
+  font-size: 12px;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 
 .btn {
