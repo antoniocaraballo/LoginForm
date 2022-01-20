@@ -8,20 +8,21 @@ let emailError = document.createElement("span");
 let pwError = document.createElement("span");
 
 const form = document.querySelector(".form");
-const btn = document.querySelector(".btn");
+const btnSignIn = document.querySelector("#btnSignIn");
+const btnSignUp = document.querySelector("#btnSignUp");
 
 // Events Loader
 
-loadEventListeners()
+window.onload = loadEventListeners();
 
 function loadEventListeners() {
-  btn.addEventListener("click", signIn);
-  uEmail.addEventListener("click", focusInput)
-  pw.addEventListener("click", focusInput)
+  btnSignIn.addEventListener("click", signIn);
+  uEmail.addEventListener("click", focusInput);
+  pw.addEventListener("click", focusInput);
 }
- 
+
 // Cancel SetTimeOut with input focus 
-function focusInput(e) {
+function focusInput() {
   if (uEmail.style.border === "2px solid red" || pw.style.border === "2px solid red") {
     emailError.remove();
     pwError.remove();
@@ -38,7 +39,8 @@ function signIn(e){
   e.preventDefault();
 
   if (uEmail.style.border === "2px solid red" || pw.style.border === "2px solid red") {
-    errorMsg.remove();
+    emailError.remove();
+    pwError.remove();
     uEmail.style = "none";
     pw.style = "none";
     return false;
