@@ -61,7 +61,7 @@ function signUp(e) {
   function validation(e) {
     // Name Validation
 
-    if (uName.value == "") {
+    if (uName.value.length < 3) {
       nameError.innerText = "Enter name";
       nameError.classList.add("error");
 
@@ -75,13 +75,12 @@ function signUp(e) {
         nameError.remove();
         uName.style = "none";
       }, 5000);
-    } else {
-      console.log("Works");
     }
 
     // Email Validation
+    let emailCheck = uEmail.value.includes("@" && ".");
 
-    if (uEmail.value == "") {
+    if (uEmail.value.length < 3 || emailCheck == false) {
       emailError.innerText = "Enter email";
       emailError.classList.add("error");
 
@@ -95,13 +94,11 @@ function signUp(e) {
         emailError.remove();
         uEmail.style = "none";
       }, 5000);
-    } else {
-      console.log("Works");
     }
 
     // Password Validation
 
-    if (pw.value == "") {
+    if (pw.value.length < 3) {
       pwError.innerText = "Enter password";
       pwError.classList.add("error");
 
@@ -115,12 +112,48 @@ function signUp(e) {
         pwError.remove();
         pw.style = "none";
       }, 5000);
-    } else {
-      console.log("Works");
+    }
+
+    if (
+      uName.value.length > 3 &&
+      uEmail.value.includes("@" && ".") &&
+      pw.value.length > 3
+    ) {
+      let allUsers = JSON.parse(localStorage.getItem("users")) || [];
+
+      let user = {
+        name: uName.value,
+        email: uEmail.value,
+        pw: pw.value,
+      };
+      let exist = false;
+
+      for (let i = 0; i < allUsers.length; i++) {
+        if (allUsers[i].email == uEmail.value) {
+          exist = true;
+          emailError.innerText = "Email taken";
+          emailError.classList.add("error");
+
+          let label = document.querySelector("#emailLabel");
+
+          label.appendChild(emailError);
+
+          uEmail.style.border = "2px solid red";
+
+          setTimeout(function () {
+            emailError.remove();
+            uEmail.style = "none";
+          }, 5000);
+          break;
+        }
+        if (!exist) {
+          allUsers.push(user);
+        }
+        localStorage.setItem("users", JSON.stringify(allUsers));
+      }
     }
 
     form.reset();
-
     // (uEmail.value.match("@"))
     // window.location.href="welcomePage.html";
   }
