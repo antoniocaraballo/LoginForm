@@ -126,11 +126,12 @@ function signUp(e) {
         email: uEmail.value,
         pw: pw.value,
       };
-      let exist = false;
+
+      let exist = true;
 
       for (let i = 0; i < allUsers.length; i++) {
         if (allUsers[i].email == uEmail.value) {
-          exist = true;
+          exist = false;
           emailError.innerText = "Email taken";
           emailError.classList.add("error");
 
@@ -144,13 +145,14 @@ function signUp(e) {
             emailError.remove();
             uEmail.style = "none";
           }, 5000);
-          break;
         }
-        if (!exist) {
-          allUsers.push(user);
-        }
-        localStorage.setItem("users", JSON.stringify(allUsers));
       }
+
+      if (exist == true) {
+        allUsers.push(user);
+      }
+
+      localStorage.setItem("users", JSON.stringify(allUsers));
     }
 
     form.reset();
