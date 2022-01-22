@@ -38,7 +38,7 @@ function focusInput() {
   }
 }
 
-// Sign In Function
+// Sign Up Function
 
 function signUp(e) {
   e.preventDefault();
@@ -150,13 +150,12 @@ function signUp(e) {
 
       if (exist == true) {
         allUsers.push(user);
+        window.location.href = "completeRegister.html";
       }
 
       localStorage.setItem("users", JSON.stringify(allUsers));
     }
 
     form.reset();
-    // (uEmail.value.match("@"))
-    // window.location.href="welcomePage.html";
   }
 }
